@@ -57,3 +57,20 @@
     color: white;
 
 }
+.validation{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.validation span{
+
+    background-color: indianred;
+    padding: .8rem;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}

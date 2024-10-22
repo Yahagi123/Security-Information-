@@ -10,28 +10,35 @@
 <body>
     <!-- Sign IN Form  -->
      <div class="box_container">
+        <?php
+            if(isset($_GET['error'])){
+                if($_GET['error'] =="Emptyspace"){
+                    echo '<span>There an Empty Space</span>';
+                }
+            }
+        ?>
 
-        <form action="" method="post">
+        <form action="SignUp_action.php" method="post">
             <h2>Sign In</h2>
 
             <div class="container">
                 <label for="Username">Username</label>
-                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="text" name="username" id="username" placeholder="Username" >
             </div>
             <div class="container">
                 <label for="Email">Email Address</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" placeholder="Email Address">
             </div>
             <div class="container">
                 <label for="Password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" placeholder="Password" >
             </div>
             <div class="container">
                 <label for="Password">Confirm Password</label>
-                <input type="password" name="con_password" id="con_password" placeholder="Password" required>
+                <input type="password" name="con_password" id="con_password" placeholder="Confirm Password" >
             </div>
             <div class="submit">
-                <input type="submit" value="Sign In" name="signin" id="signin">
+                <input type="submit" value="Sign In" name="submit" id="submit">
 
             </div>
             
