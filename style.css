@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arima",sans-serif;
+}
+
+.box_container{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.box_container h2{
+    text-align: center;
+    padding: .20rem;
+}
+
+.box_container form {
+    background: rgb(182, 182, 182);
+    width: 100%;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.container{
+    margin: 15px;
+
+}
+
+.container input{
+    width: 320px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.container label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.box_container .submit input{
+    width: 100%;
+    margin-top: 15px;
+    background: black;
+    padding: 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .98rem;
+    font-weight: 500;
+    color: white;
+
+}
