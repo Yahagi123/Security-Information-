@@ -10,15 +10,39 @@
 <body>
     <!-- Sign IN Form  -->
      <div class="box_container">
-        <?php
-            if(isset($_GET['error'])){
-                if($_GET['error'] =="Emptyspace"){
-                    echo '<span>There an Empty Space</span>';
-                }
-            }
-        ?>
 
         <form action="SignUp_action.php" method="post">
+            <!-- Validation -->
+            <div class="validation">
+                <?php
+                    if(isset($_GET['error'])){
+                        if($_GET['error'] =="Emptyspace"){
+                            echo '<span>There an Empty Space</span>';
+                        }
+                        if($_GET['error'] =="Invalid_Email"){
+                            echo '<span>The Email Is Invalid</span>';
+                        }
+                        if($_GET['error'] =="Invalid_username"){
+                            echo '<span>Invalid Username</span>';
+                        }
+                        if($_GET['error'] =="Shorten"){
+                            echo '<span>The Password Must be 8-16</span>';
+                        }
+                        if($_GET['error'] =="UpperCase"){
+                            echo '<span>Password Must Have A Uppercase</span>';
+                        }
+                        if($_GET['error'] =="Lowercase"){
+                            echo '<span>Password Must Have A Lowercase</span>';
+                        }
+                        if($_GET['error'] =="Special_Character"){
+                            echo '<span>There an Empty Space</span>';
+                        }
+                        if($_GET['error'] =="Similar"){
+                            echo '<span>The Password Is Not The Same</span>';
+                        }
+                    }
+                ?>
+            </div> 
             <h2>Sign In</h2>
 
             <div class="container">
