@@ -1,6 +1,6 @@
-
-
-
+<?php
+ session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +10,15 @@
     <title>Document</title>
 </head>
 <body>
+<p>hello user?</p>
+<?php
+
+if(isset($_SESSION['userId'])){
+    echo "<span>Welcome user</span>";
+    unset($_SESSION['userId']);
+}
+
+?>
     
 </body>
 </html>

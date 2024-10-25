@@ -13,45 +13,52 @@
 
         <form action="SignUp_action.php" method="post">
             <!-- Validation -->
-            <div class="validation">
-                <?php
-                    if(isset($_GET['error'])){
-                        if($_GET['error'] =="Emptyspace"){
-                            echo '<span>There an Empty Space</span>';
-                        }
-                        if($_GET['error'] =="Invalid_Email"){
-                            echo '<span>The Email Is Invalid</span>';
-                        }
-                        if($_GET['error'] =="Invalid_username"){
-                            echo '<span>Invalid Username</span>';
-                        }
-                        if($_GET['error'] =="Shorten"){
-                            echo '<span>The Password Must be 8-16</span>';
-                        }
-                        if($_GET['error'] =="UpperCase"){
-                            echo '<span>Password Must Have A Uppercase</span>';
-                        }
-                        if($_GET['error'] =="Lowercase"){
-                            echo '<span>Password Must Have A Lowercase</span>';
-                        }
-                        if($_GET['error'] =="Special_Character"){
-                            echo '<span>There an Empty Space</span>';
-                        }
-                        if($_GET['error'] =="Similar"){
-                            echo '<span>The Password Is Not The Same</span>';
-                        }
-                        if($_GET['error'] == 'user_exist'){
-                            echo '<span>User Is already Exist</span>';
-                        }
-                        if($_GET['error'] =='email_exsit'){
-                            echo '<span>Email is already Exist</span>';
-                        }
-                        if($_GET['Accept'] =='Success'){
-                            echo '<span>Sign Up Successfull';
-                        }
-                    }
-                ?>
-            </div> 
+            <div class="valid-container">
+    <?php 
+    
+    if(isset($_GET['error'])){
+        if($_GET['error'] == 'emptyfields'){
+            echo '<span>Empty fields</span>';
+        }
+        if($_GET['error'] == 'invalidEmailandUsername'){
+            echo '<span>Invalid Email and username</span>';
+        }
+        if($_GET['error'] == 'invalidEmail'){
+            echo '<span>Invalid email</span>';
+        }
+        if($_GET['error'] == 'usernmatFormat'){
+            echo '<span>Invalid username</span>';
+        }
+        if($_GET['error'] == 'invalidLengthPassword'){
+            echo '<span>Password must be more than 8 characters</span>';
+        }
+        if($_GET['error'] == 'passwordcheck'){
+            echo '<span>Password not match</span>';
+        }
+        if($_GET['error'] == 'usertaken'){
+            echo '<span>Username is taken</span>';
+        }
+        if($_GET['error'] == 'password2'){
+            echo '<span>Uppercase</span>';
+        }
+        if($_GET['error'] == 'password3'){
+            echo '<span>Lowercase</span>';
+        }
+        if($_GET['error'] == 'password4'){
+            echo '<span>One digit</span>';
+        }
+        if($_GET['error'] == 'password5'){
+            echo '<span>One special symbol</span>';
+        }
+    }
+    if(isset($_GET['signup'])){
+        if($_GET['signup'] == 'success'){
+            echo "<span id='success' >account successfully created</span>";
+        }
+    }
+
+    ?>
+</div>
             <h2>Sign In</h2>
 
             <div class="container">
