@@ -6,6 +6,8 @@
         $email = $_POST["email"];
         $password2 = $_POST["con_password"];
 
+
+
         //if  There an Empty Space
         if(empty($username) || empty($password) || empty($email)){
             header("Location:./SignUp.php? error=Emptyspace");
@@ -44,20 +46,18 @@
             header("Location:./SignUp.php? error=Special_Character");
             exit();
         }
-        elseif ($password !== $password2) {
-            header("Location:./SignUp.php? error=Similar");
-        }
         //Username Email Existing
-      
+
         else{
         
             $sql = "INSERT INTO `user`(`Username`, `Email`, `Password`) VALUES ('$username','$email','$password')";
             if($conn->query($sql)){
-                echo "Insert Successfull";
-                }
+                header("Location:./SignUp.php? Accept=Success");
+            }
                 else{
                     die("Error".$conn->connect_error);
                 }
          }
+         mysqli_close($conn);
     }
 ?>

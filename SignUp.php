@@ -40,6 +40,15 @@
                         if($_GET['error'] =="Similar"){
                             echo '<span>The Password Is Not The Same</span>';
                         }
+                        if($_GET['error'] == 'user_exist'){
+                            echo '<span>User Is already Exist</span>';
+                        }
+                        if($_GET['error'] =='email_exsit'){
+                            echo '<span>Email is already Exist</span>';
+                        }
+                        if($_GET['Accept'] =='Success'){
+                            echo '<span>Sign Up Successfull';
+                        }
                     }
                 ?>
             </div> 

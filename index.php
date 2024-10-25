@@ -10,8 +10,26 @@
 <body>
     <!-- Sign IN Form  -->
      <div class="box_container">
-
         <form action="" method="post">
+        <div class="valid-container">
+            <?php 
+                if(isset($_GET['error'])){
+                    if($_GET['error'] == 'Empty'){
+                        echo '<span>Field is empty</span>';
+                    }
+                    else if($_GET['error'] == 'wrong-password'){
+                        echo '<span>Wrong password</span>';
+                    }
+                    else if($_GET['error'] == 'tempo_locked'){
+                        echo '<span>tempo locked</span>';
+                    }
+                    else if($_GET['error'] == 'account_locked'){
+                        echo '<span>Account locked</span>';
+                    }
+                }
+
+             ?>
+        </div>
             <h2>Sign In</h2>
 
             <div class="container">
