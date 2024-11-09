@@ -23,7 +23,7 @@ if(isset($_POST['logout'])){
 <body class="bg-white pb-5" >
     <style>
         #space{
-            left: 87%;
+            left: 80%;
             position: absolute;
         }
     </style>
